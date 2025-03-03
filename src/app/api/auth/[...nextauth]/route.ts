@@ -15,6 +15,7 @@ const authOptions: NextAuthOptions = {
 
     ],
     callbacks: {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         async session({session, token}: any) {
             session.user.username = session?.user.name?.replace(/[^a-zA-Z]/g, "") .toLowerCase();          
             session.user.email = session?.user.email;

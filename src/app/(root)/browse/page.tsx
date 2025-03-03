@@ -1,10 +1,10 @@
 'use client'
 import LoginComponent from "@/components/shared/login";
-import { useGlobalContext } from "@/context";
+// import { useGlobalContext } from "@/context";
 import React from "react";
 import { useSession } from "next-auth/react";
 export default function BrowsePage() {
-    const {account} = useGlobalContext();
+    // const {account} = useGlobalContext();
     const {data: session, status} = useSession();
     console.log(session);
     
